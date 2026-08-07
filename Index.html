@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pink Surprise ✨</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Poppins,sans-serif;
+  background:linear-gradient(135deg,#ffd1e3,#f7a8c8,#e9b7ff);
+  overflow-x:hidden;
+  color:#5b2140;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at 15% 20%,#fff 0 2px,transparent 3px),
+    radial-gradient(circle at 80% 30%,#fff 0 2px,transparent 3px),
+    radial-gradient(circle at 35% 80%,#fff 0 2px,transparent 3px);
+  background-size:120px 120px;
+  opacity:.45;
+  pointer-events:none;
+}
+
+.container{
+  width:min(94%,700px);
+  margin:35px auto;
+  text-align:center;
+}
+
+.card{
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(12px);
+  border-radius:28px;
+  padding:28px 20px;
+  box-shadow:0 20px 60px rgba(112,35,77,.2);
+}
+
+h1,h2{
+  font-family:"Dancing Script",cursive;
+  font-weight:700;
+}
+
+h1{
+  font-size:48px;
+  margin:5px 0 10px;
+}
+
+h2{
+  font-size:38px;
+}
+
+.subtitle{
+  color:#8c4969;
+  margin-bottom:25px;
+}
+
+.step{
+  display:none;
+}
+
+.step.active{
+  display:block;
+  animation:show .5s ease;
+}
+
+@keyframes show{
+  from{opacity:0;transform:translateY(18px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+input,textarea,select{
+  width:100%;
+  padding:14px 16px;
+  margin:8px 0;
+  border:2px solid #f2b1cc;
+  border-radius:15px;
+  outline:none;
+  font-family:Poppins,sans-serif;
+  font-size:15px;
+  background:#fff8fb;
+}
+
+textarea{
+  min-height:130px;
+  resize:vertical;
+}
+
+button{
+  border:0;
+  padding:13px 22px;
+  margin:8px 5px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#ff5f9e,#c95cff);
+  color:white;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  box-shadow:0 8px 20px rgba(211,65,137,.25);
+}
+
+button:hover{
+  transform:translateY(-2px);
+}
+
+.secondary{
+  background:#fff;
+  color:#b13c70;
+  border:2px solid #f2b1cc;
+}
+
+.categories{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin-top:18px;
+}
+
+.category{
+  padding:17px 8px;
+  background:#fff5fa;
+  border:2px solid #f4bfd5;
+  border-radius:18px;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.category:hover{
+  transform:scale(1.03);
+  background:#ffe4ef;
+}
+
+.category.selected{
+  border-color:#ed4d91;
+  background:#ffd7e7;
+}
+
+.icon{
+  display:block;
+  font-size:28px;
+  margin-bottom:5px;
+}
+
+.photo-box{
+  border:2px dashed #ef9fbe;
+  padding:20px;
+  border-radius:20px;
+  margin:15px 0;
+  background:#fff8fb;
+}
+
+.preview{
+  max-width:180px;
+  max-height:180px;
+  border-radius:18px;
+  margin:12px auto;
+  display:none;
+  object-fit:cover;
+}
+
+.gift{
+  font-size:90px;
+  animation:bounce 1.2s infinite;
+}
+
+@keyframes bounce{
+  50%{transform:translateY(-12px) rotate(4deg)}
+}
+
+.final{
+  background:linear-gradient(135deg,#fff1f7,#fce4ff);
+  border-radius:24px;
+  padding:25px 18px;
+}
+
+.final-title{
+  font-family:"Dancing Script",cursive;
+  font-size:48px;
+  color:#a32962;
+}
+
+.message{
+  line-height:1.8;
+  font-size:16px;
+  color:#66354d;
+  white-space:pre-line;
+}
+
+.final-photo{
+  width:180px;
+  height:180px;
+  object-fit:cover;
+  border-radius:50%;
+  border:6px solid white;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+  display:none;
+  margin:15px auto;
+}
+
+.hearts{
+  font-size:25px;
+  letter-spacing:8px;
+  margin:15px 0;
+}
+
+.small{
+  font-size:12px;
+  color:#9a6780;
+}
+
+@media(max-width:
